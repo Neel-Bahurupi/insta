@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Header.module.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import book from "../../assets/bookmark.jpg";
 import user from "../../assets/user.png";
@@ -147,6 +147,8 @@ export default function Header({ isLoggedIn, handleLogout }) {
   const [username, setUsername] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [userInfo, setUserInfo] = useState(false);
+  const navigate = useNavigate();
+
   useEffect(() => {
     const username = localStorage.getItem("user");
     if (username) {
@@ -177,7 +179,13 @@ export default function Header({ isLoggedIn, handleLogout }) {
     <div className={styles.loggedin}>
       <div className={styles.header}>
         <div>
-          <h2>SwipTory</h2>
+          <h2
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            SwipTory
+          </h2>
         </div>
         <div>
           <div className={styles.desktop}>

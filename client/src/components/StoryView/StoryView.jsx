@@ -27,7 +27,9 @@ export default function AllStories() {
 
   const getAllStories = async (username) => {
     try {
-      const response = await axios.get("http://localhost:3000/api/allstory");
+      const response = await axios.get(
+        "http://52.87.252.232:3000/api/allstory"
+      );
       //   console.log("Response Data:", response.data);
       const stories = response.data;
       // Group stories by category

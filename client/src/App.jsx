@@ -27,7 +27,7 @@ function App() {
 
     try {
       const response = await axios.get(
-        "http://localhost:3000/auth/validateToken",
+        "http://52.87.252.232:3000/auth/validateToken",
         {
           headers: {
             Authorization: "Bearer " + token,

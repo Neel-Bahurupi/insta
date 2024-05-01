@@ -55,7 +55,7 @@ export default function StoryForm() {
     const user = localStorage.getItem("user");
 
     try {
-      const response = await axios.post("http://localhost:3000/api/story", {
+      const response = await axios.post("http://52.87.252.232:3000/api/story", {
         storyId: generateRandomStoryId(),
         slides,
         user,

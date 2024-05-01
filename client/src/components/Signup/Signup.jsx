@@ -18,7 +18,7 @@ export default function Signup({ setLoggedIn }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const response = await axios.post(
-      "http://localhost:3000/auth/register",
+      "http://52.87.252.232:3000/auth/register",
       formData,
       {
         headers: {

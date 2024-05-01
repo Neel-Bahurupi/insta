@@ -25,7 +25,7 @@ export default function StoryViewer() {
     const fetchStory = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/story/${storyId}`
+          `http://52.87.252.232:3000/api/story/${storyId}`
         );
         setStory(response.data);
       } catch (error) {
@@ -105,7 +105,7 @@ export default function StoryViewer() {
       setIsBookmarked((prevStatus) => !prevStatus);
 
       const response = await axios.post(
-        `http://localhost:3000/save/bookmarks`,
+        `http://52.87.252.232:3000/save/bookmarks`,
         {
           storyId: storyId,
         },

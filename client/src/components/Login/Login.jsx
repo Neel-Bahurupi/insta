@@ -18,7 +18,7 @@ export default function Login({ handleLogin }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const response = await axios.post(
-      "http://localhost:3000/auth/login",
+      "http://52.87.252.232:3000/auth/login",
       formData,
       {
         headers: {

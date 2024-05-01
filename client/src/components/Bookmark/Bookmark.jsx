@@ -22,7 +22,7 @@ const BookmarksPage = ({ handleLogout }) => {
           return;
         }
         const response = await axios.get(
-          `http://localhost:3000/save/bookmarks/${username}`,
+          `http://52.87.252.232:3000/save/bookmarks/${username}`,
           {
             headers: {
               Authorization: "Bearer " + token,
@@ -41,11 +41,14 @@ const BookmarksPage = ({ handleLogout }) => {
   const handleRemoveBookmark = async (bookmarkId) => {
     const token = localStorage.getItem("token");
     try {
-      await axios.delete(`http://localhost:3000/save/bookmarks/${bookmarkId}`, {
-        headers: {
-          Authorization: "Bearer " + token,
-        },
-      });
+      await axios.delete(
+        `http://52.87.252.232:3000/save/bookmarks/${bookmarkId}`,
+        {
+          headers: {
+            Authorization: "Bearer " + token,
+          },
+        }
+      );
       // Update bookmarks state after removing the bookmark
       setBookmarks((prevBookmarks) =>
         prevBookmarks.filter((bookmark) => bookmark._id !== bookmarkId)
@@ -76,9 +79,6 @@ const BookmarksPage = ({ handleLogout }) => {
               backgroundRepeat: "no-repeat",
             }}
           >
-            {/* Display bookmark details */}
-            {/* Story ID: {bookmark.story._id}, User: {bookmark.user} */}
-            {/* <img src={bookmark.story.slides[0].imageURL} /> */}
             <div className={styles.details}>
               <h3>{bookmark.story.slides[0].heading}</h3>
               <div>{bookmark.story.slides[0].description}</div>
