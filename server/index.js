@@ -17,7 +17,7 @@ app.use("/auth", authRoutes);
 app.use("/api", storyRoutes);
 app.use("/save", BookmarkRoutes);
 
-app.get("/health", (req, res) => {
+app.get("/", (req, res) => {
   res.json("server started");
 });
 
