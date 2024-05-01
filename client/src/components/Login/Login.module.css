@@ -1,0 +1,182 @@
+/* * {
+  border: 1px solid red;
+} */
+.popupcontainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  max-width: 500px;
+  height: 50%;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+}
+.form:focus {
+  outline: none;
+}
+.maindiv {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.closeicon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.heading {
+  text-align: center;
+  color: black;
+  font-size: 20px;
+}
+.container {
+  margin: 3rem;
+}
+.detailDiv {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.detailpassword {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+label {
+  font-weight: bold;
+}
+
+.detailDiv input {
+  padding: 10px;
+  margin-top: 5px;
+  border: 2px solid black;
+  box-sizing: border-box;
+  width: 300px;
+}
+
+.passworddiv input {
+  padding: 10px;
+  margin-top: 5px;
+  border: 2px solid black;
+  box-sizing: border-box;
+  /* width: 100%; */
+  width: 300px;
+}
+.passworddiv {
+  position: relative;
+}
+.imgeye {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 15px;
+  right: 5px;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+}
+
+.button {
+  padding: 10px 35px;
+  background-color: #007bff;
+  color: black;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 600px) {
+  .closeicon {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .heading {
+    font-size: 20px !important;
+    /* border: 2px solid black; */
+  }
+
+  .container {
+    margin: 0;
+    width: 80%;
+  }
+  .maindiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* border: 2px solid black; */
+  }
+  .form {
+    padding: 10px;
+    width: 80%;
+  }
+  label {
+    font-weight: bold;
+  }
+  .detailDiv,
+  .detailpassword {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .passworddiv {
+    width: 100%;
+  }
+  .detailDiv input,
+  .passworddiv input {
+    width: 100%;
+    margin-left: 0;
+    font-size: 10px;
+    border: 2px solid black;
+  }
+  .passworddiv {
+    position: relative;
+  }
+  .imgeye {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+  }
+  .button {
+    padding: 10px 25px; /* Adjust button padding for smaller screens */
+    font-size: 16px; /* Decrease font size for smaller screens */
+  }
+}

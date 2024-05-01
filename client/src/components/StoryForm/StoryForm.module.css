@@ -1,0 +1,214 @@
+.storyForm {
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 3rem 3rem;
+  /* width: 50vw; */
+  /* height: 60vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: fixed;
+  /* top: 15vh; */
+  top: 50%; /* Center horizontally */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center horizontally and vertically */
+  background-color: white; /* Set background color */
+  z-index: 999;
+}
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 28, 28, 0.5);
+  z-index: 998;
+}
+.storySlides {
+  /* border: 2px solid black; */
+  display: flex;
+  flex-direction: column;
+}
+.slideButtons {
+  display: flex;
+}
+.slideButton,
+.addSlideButton {
+  border: 2px solid grey;
+  box-shadow: 0px 4px 15px 0px #0000001a;
+  margin-right: 1rem;
+  width: 8rem;
+}
+
+.form {
+  display: flex;
+
+  /* border: 2px solid black; */
+  /* flex-direction: row; */
+}
+input {
+  padding: 0.7rem 1rem;
+  margin-left: 1rem;
+  font-weight: 600;
+  font-size: 13px;
+}
+select {
+  padding: 1rem 2rem;
+  margin-left: 1rem;
+  font-weight: 700;
+  font-size: 13px;
+}
+option {
+  font-weight: 800;
+  font-size: 13px;
+}
+.storySlides {
+  display: flex;
+}
+.slideno {
+  border: 2px solid black;
+  width: 8vw;
+  margin-bottom: 1rem;
+}
+.div_for_form_contain {
+  /* border: 2px solid black; */
+  display: flex;
+  margin: 1rem;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: space-between;
+  /* width: 25vw; */
+}
+.formContain {
+  /* border: 2px solid rgb(225, 18, 18); */
+  /* height: 40vh; */
+  /* width: 25vw; */
+  display: flex;
+
+  /* align-items: center; */
+  flex-direction: column;
+
+  justify-content: space-around;
+}
+.button_functional_A {
+  /* border: 2px solid black; */
+  /* width: 27vw; */
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.button_functional {
+  display: flex;
+}
+.pervious,
+.next,
+.post {
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  color: white;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.pervious {
+  background-color: lightgreen;
+}
+.next {
+  background-color: blue;
+}
+.post {
+  background-color: #ff7373;
+}
+.img {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  bottom: 3rem;
+  left: 7rem;
+
+  /* right: 12px; */
+}
+.closeBtn {
+  /* display: flex; */
+  /* border: 2px solid black; */
+  position: relative;
+  left: 19rem;
+  width: 25px;
+  height: 25px;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+  .storyForm {
+    max-width: 50vw;
+  }
+
+  .contentContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Align items to the start of the row */
+    justify-content: space-between;
+  }
+  .storySlides {
+    /* display: flex; */
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .slideButtons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .slideButton,
+  .addSlideButton {
+    width: auto;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .button_functional {
+    display: none;
+  }
+  .button_functional_A {
+    display: flex;
+    justify-content: center;
+  }
+  .closeBtn {
+    position: fixed;
+    left: 16rem;
+    top: 1rem;
+  }
+  .img {
+    position: relative;
+    left: 4rem;
+    bottom: 5rem;
+  }
+  .div_for_form_contain {
+    display: flex;
+    flex-direction: column;
+    margin: 2px;
+    /* border: 2px solid black; */
+  }
+  label {
+    /* display: block; */
+    /* border: 2px solid black; */
+    margin-bottom: 0.5rem;
+  }
+  input,
+  select {
+    width: calc(100% - 2rem);
+    margin: 0.5rem 1rem;
+    /* display: block; */
+    border: 2px solid black;
+    font-size: 10px;
+  }
+  option {
+    width: 10px;
+    font-size: 7px;
+
+    padding-right: 1px;
+  }
+  .formContain {
+    max-width: 100%;
+  }
+}

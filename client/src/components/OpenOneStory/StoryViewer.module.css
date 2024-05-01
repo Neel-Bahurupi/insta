@@ -1,0 +1,82 @@
+.story_viewer {
+  position: fixed;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 0rem;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  overflow-y: hidden;
+}
+.story_popup {
+  /* border: 2px solid black; */
+  /* height: 70vh; */
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navigation {
+  /* border: 2px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navigation div {
+  /* border: 2px solid black; */
+  background-color: black;
+}
+.story_container {
+  border-color: #d9d9d9;
+  border-radius: 10px;
+
+  background-color: rgb(87, 77, 77);
+  margin: 2rem;
+  padding: 1rem;
+}
+.actions {
+  display: flex;
+  justify-content: space-between;
+}
+.slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  /* border: 2px solid red; */
+  height: 40vh;
+  padding: 1rem;
+  color: white;
+}
+
+.description {
+  font-size: 13px;
+}
+
+.storyBar {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 1rem;
+  /* border: 2px solid black; */
+}
+.bar {
+  width: 50px;
+  height: 10px;
+  background-color: #ccc;
+  margin-right: 5px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .story_popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .story_container {
+    padding: 0.5rem 3rem;
+  }
+}
