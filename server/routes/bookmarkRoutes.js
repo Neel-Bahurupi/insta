@@ -4,11 +4,11 @@ const authentication = require("../middleware/authMiddleware");
 const {
   addtoBookmark,
   getBookmarks,
-  // removeBookmarked,
+  removeBookmarked,
 } = require("../controllers/bookmarkController");
 const authMiddleware = require("../middleware/authMiddleware");
 router.post("/bookmarks", authMiddleware, addtoBookmark);
 router.get("/bookmarks/:username", authMiddleware, getBookmarks);
-// router.delete("/bookmarks/:bookmarkId", authMiddleware, removeBookmarked);
+router.delete("/bookmarks/:bookmarkId", authMiddleware, removeBookmarked);
 
 module.exports = router;

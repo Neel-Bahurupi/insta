@@ -27,20 +27,20 @@ const getBookmarks = async (req, res) => {
   }
 };
 
-// const removeBookmarked = async (req, res) => {
-//   const { bookmarkId } = req.params;
+const removeBookmarked = async (req, res) => {
+  const { bookmarkId } = req.params;
 
-//   try {
-//     await Bookmark.findByIdAndDelete(bookmarkId);
-//     res.json({ message: "Bookmark deleted successfully" });
-//   } catch (error) {
-//     console.error("Error deleting bookmark:", error);
-//     res.status(500).json({ message: "Server error" });
-//   }
-// };
+  try {
+    await Bookmark.findByIdAndDelete(bookmarkId);
+    res.json({ message: "Bookmark deleted successfully" });
+  } catch (error) {
+    console.error("Error deleting bookmark:", error);
+    res.status(500).json({ message: "Server error" });
+  }
+};
 
 module.exports = {
   addtoBookmark,
   getBookmarks,
-  // removeBookmarked,
+  removeBookmarked,
 };
